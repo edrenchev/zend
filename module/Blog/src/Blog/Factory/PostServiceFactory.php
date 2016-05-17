@@ -8,16 +8,16 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 
 class PostServiceFactory implements FactoryInterface
 {
-	/**
-	 * Create service
-	 *
-	 * @param ServiceLocatorInterface $serviceLocator
-	 * @return mixed
-	 */
-	public function createService(ServiceLocatorInterface $serviceLocator)
-	{
-		return new PostService(
-				$serviceLocator->get('Blog\Mapper\PostMapperInterface')
-				);
-	}
+    /**
+     * Create service
+     *
+     * @param ServiceLocatorInterface $serviceLocator
+     * @return mixed
+     */
+    public function createService(ServiceLocatorInterface $serviceLocator)
+    {
+        return new PostService(
+            $serviceLocator->get('Blog\Mapper\PostMapperInterface')
+        );
+    }
 }
